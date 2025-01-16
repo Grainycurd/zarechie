@@ -1,0 +1,485 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+section {
+ text-align: center;
+}
+/* Шапка */
+header {
+    background-color: #3b8b4f;
+    padding: 20px 0;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Разделяем элементы по сторонам */
+    flex-wrap: wrap; /* Позволяет перенос элементов на следующую строку */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+header .logo a {
+    text-decoration: none;
+}
+header .logo-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    margin-left: -10px;
+    transform: translateY(-80%);
+}
+
+header nav {
+    flex-grow: 1; /* Навигация растягивается для равномерного распределения */
+    text-align: center; /* Центрируем элементы навигации */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: right; /* Центрируем кнопки */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Пробелы между кнопками */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+header nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*
+/* Эффект hover для навигации */
+header nav a:hover {
+    background-color: #f2f2f2; /* Светлый фон при наведении */
+    color: #5b3c22; /* Темный текст */
+}
+
+
+.cta-button {
+    background-color: #FF8C00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px; /* Отступ для кнопки справа */
+    white-space: nowrap; /* Защита от переноса текста */
+}
+/* Hero section */
+.hero {
+    position: relative;
+    max-height: 800px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    overflow: hidden;
+    width: 100vw; /* Занимает всю ширину экрана */
+    margin: 0; /* Убираем любые отступы */
+}
+
+.hero-slideshow {
+    display: flex;
+    position: relative;
+    width: 100%; /* Занимает 100% ширины родителя */
+    height: 500px; /* Высота слайдшоу */
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide img {
+    width: 100%; /* Картинка растягивается на всю ширину */
+    height: 100%; /* И на всю высоту */
+    object-fit: cover; /* Картинка обрезается по краям, чтобы сохранить пропорции */
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    opacity:50%;
+}
+/* Контейнер для текста под слайдшоу */
+.key-details {
+    display: flex;
+    justify-content: space-between; /* Распределение по ширине */
+    padding: 20px;
+    margin-top: -10px; /* Немного поднимем блок для стыковки с слайдшоу */
+}
+
+.key-item {
+    text-align: center;
+    width: 30%; /* 3 столбца */
+}
+
+.distance {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.line {
+    border-bottom: 2px solid #3b8b4f;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.label {
+    font-size: 14px;
+    color: #ffffff; /* Тёмный цвет для текста */
+}
+
+/* Заголовки */
+.hero h1 {
+    font-size: 32px;
+    margin-top: -30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* Общие настройки для секций */
+.about, .location, .investment, .contacts {
+    padding: 60px 0;
+    width: 100%;
+    background-color: #f9f9f9; /* Светлый фон для лучшей контрастности */
+}
+
+/* Заголовки секций */
+.about h2, .location h2, .investment h2, .contacts h2 {
+    font-size: 32px; /* Увеличен размер для лучшей видимости */
+    margin-bottom: 20px;
+    color: #2c3e50; /* Тёмно-серый для контраста */
+    font-weight: 600; /* Выделение заголовков */
+    text-align: center; /* Центрирование заголовков */
+}
+
+/* Обычные абзацы */
+.about p, .location p, .investment p, .contacts p {
+    font-size: 18px; /* Увеличен размер для улучшения читаемости */
+    line-height: 1.8; /* Увеличен межстрочный интервал */
+    color: #555; /* Немного темнее серый */
+    margin-bottom: 20px; /* Увеличен отступ между абзацами */
+}
+
+/* Список с деталями */
+.key-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.key-details li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px; /* Увеличен отступ для разделения элементов */
+    color: #555; /* Более темный серый для текста */
+}
+
+/* Выделение важных данных в списке */
+.key-details li strong {
+    color: #5b3c22; /* Коричневый цвет для выделения */
+    font-weight: 700; /* Жирное выделение */
+}
+
+/* Блок с иконками */
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.icon p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Контейнер для карты */
+.map-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.yandex-map {
+    width: 48%;
+    height: 400px;
+}
+
+.location-overlay {
+    width: 48%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.location-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Инвестиции */
+/* Секция Инвестиции */
+.investment {
+    background-color: #f9f9f9; /* Светлый фон для лучшей контрастности */
+    padding: 50px 0;
+}
+
+.investment h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Блоки опций */
+.investment-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Расстояние между блоками */
+    flex-wrap: wrap; /* Чтобы блоки переносились на следующую строку на маленьких экранах */
+}
+
+/* Одна опция */
+.option {
+    background-color: #fff; /* Белый фон для блока */
+    padding: 20px;
+    border: 2px solid #ddd; /* Легкая рамка */
+    border-radius: 10px;
+    width: 30%; /* Ширина блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Эффект на ховер */
+.option:hover {
+    transform: translateY(-10px); /* Поднимаем блок при наведении */
+    background-color: #f2f2f2; /* Легкий фон при наведении */
+    border-color: #5b3c22; /* Меняем цвет рамки */
+}
+
+/* Заголовок внутри блока */
+.option h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Текст внутри блока */
+.option p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Стили для формы */
+form input, form textarea {
+    width: 100%;
+    max-width: 100%; /* Обеспечивает, что элементы не будут растягиваться больше чем 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Чтобы padding не увеличивал размеры */
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow: hidden; /* При переполнении скрывает текст */
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст выходит за пределы */
+    resize: none;
+}
+
+/* Стиль кнопки */
+form button {
+    width: auto; /* Кнопка не растягивается на всю ширину */
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #FF8C00;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+/* Стиль кнопки при наведении */
+form button:hover {
+    background-color: #e57b00;
+}
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 50%;
+}
+
+/* Адаптивность для различных экранов */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-slide img {
+        object-position: center;
+    }
+
+    .map-wrapper {
+        flex-direction: column;
+    }
+
+    .yandex-map, .location-overlay {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .investment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: 80%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .investment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: 100%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .about h2, .location h2, .investment h2, .contacts h2 {
+        font-size: 24px;
+    }
+
+    .about p, .location p, .investment p, .contacts p {
+        font-size: 14px;
+    }
+}
