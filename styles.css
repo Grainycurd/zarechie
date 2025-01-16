@@ -19,6 +19,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    text-align: center;
 }
 /* Шапка */
 header {
@@ -155,6 +156,7 @@ header nav a:hover {
 }
 /* Контейнер для текста под слайдшоу */
 .key-details {
+
     display: flex;
     justify-content: space-between; /* Распределение по ширине */
     padding: 20px;
