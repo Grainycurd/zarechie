@@ -90,8 +90,7 @@ header nav a {
 /*
 /* Эффект hover для навигации */
 header nav a:hover {
-    background-color: #f2f2f2; /* Светлый фон при наведении */
-    color: #5b3c22; /* Темный текст */
+    color: #000000; /* Темный текст */
 }
 
 
@@ -103,6 +102,9 @@ header nav a:hover {
     text-decoration: none;
     margin-left: 20px; /* Отступ для кнопки справа */
     white-space: nowrap; /* Защита от переноса текста */
+}
+.cta-button:hover {
+    transform: translateY(1px);
 }
 /* Hero section */
 .hero {
@@ -322,7 +324,6 @@ header nav a:hover {
 .option:hover {
     transform: translateY(-10px); /* Поднимаем блок при наведении */
     background-color: #f2f2f2; /* Легкий фон при наведении */
-    border-color: #5b3c22; /* Меняем цвет рамки */
 }
 
 /* Заголовок внутри блока */
