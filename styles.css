@@ -1,4 +1,7 @@
 /* Общие стили */
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +19,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
-section {
- text-align: center;
 }
 /* Шапка */
 header {
@@ -322,7 +322,7 @@ header nav a:hover {
 
 /* Эффект на ховер */
 .option:hover {
-    transform: translateY(-10px); /* Поднимаем блок при наведении */
+    transform: translateY(-2px); /* Поднимаем блок при наведении */
     background-color: #f2f2f2; /* Легкий фон при наведении */
 }
 
@@ -358,6 +358,15 @@ form input, form textarea {
     resize: none;
 }
 
+/* Стиль для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    padding: 20px;
+}
+
 /* Стиль кнопки */
 form button {
     width: auto; /* Кнопка не растягивается на всю ширину */
@@ -370,7 +379,7 @@ form button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    align-self: flex-start;
+    align-self: center;
 }
 
 /* Стиль кнопки при наведении */
@@ -446,7 +455,9 @@ footer p {
         width: 80%;
         margin-bottom: 20px;
     }
-
+    .distance {
+        font-size: 30px;
+    }
     .investment-options {
         flex-direction: column;
         align-items: center;
@@ -475,7 +486,9 @@ footer p {
         padding: 10px 20px;
         font-size: 12px;
     }
-
+    .distance {
+        font-size: 20px;
+    }
     .about h2, .location h2, .investment h2, .contacts h2 {
         font-size: 24px;
     }
