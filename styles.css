@@ -24,12 +24,14 @@ body {
 }
 /* Шапка */
 header {
+  
     background-color: #3b8b4f;
-    padding: 20px 0;
+    padding: 10px 0;
     color: white;
 }
 
 header .container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Разделяем элементы по сторонам */
@@ -99,7 +101,7 @@ header nav a:hover {
 .cta-button {
     background-color: #FF8C00;
     color: white;
-    padding: 10px 20px;
+    padding: 6px 12px;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 20px; /* Отступ для кнопки справа */
@@ -151,7 +153,7 @@ header nav a:hover {
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #ffffff;
     opacity:50%;
 }
@@ -162,6 +164,7 @@ header nav a:hover {
     justify-content: space-between; /* Распределение по ширине */
     padding: 20px;
     margin-top: 10px; /* Немного поднимем блок для стыковки с слайдшоу */
+    margin-bottom: -25px;
 }
 
 .key-item {
@@ -244,14 +247,14 @@ header nav a:hover {
 .icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 80px;
     flex-wrap: wrap;
 }
 
 .icon {
     text-align: center;
     width: 30%;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 .icon img {
@@ -266,6 +269,9 @@ header nav a:hover {
 }
 
 /* Контейнер для карты */
+.adress {
+    text-align: left;
+}
 .map-wrapper {
     display: flex;
     justify-content: space-between;
@@ -374,7 +380,7 @@ form {
 /* Стиль кнопки */
 form button {
     width: auto; /* Кнопка не растягивается на всю ширину */
-    padding: 15px 30px;
+    padding: 6px 12px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -435,7 +441,10 @@ footer p {
     }
 
     .cta-button {
-        padding: 12px 25px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .nav {
         font-size: 14px;
     }
 }
@@ -471,12 +480,22 @@ footer p {
     }
 
     .cta-button {
-        padding: 12px 25px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .nav {
         font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        text-align: center;
+    }
     .hero h1 {
         font-size: 24px;
     }
@@ -486,8 +505,11 @@ footer p {
     }
 
     .cta-button {
-        padding: 10px 20px;
-        font-size: 12px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    .nav {
+        font-size: 10px;
     }
     .distance {
         font-size: 20px;
