@@ -14,6 +14,7 @@ body {
     color: #333;
 }
 
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -160,7 +161,7 @@ header nav a:hover {
     display: flex;
     justify-content: space-between; /* Распределение по ширине */
     padding: 20px;
-    margin-top: -10px; /* Немного поднимем блок для стыковки с слайдшоу */
+    margin-top: 10px; /* Немного поднимем блок для стыковки с слайдшоу */
 }
 
 .key-item {
@@ -176,7 +177,7 @@ header nav a:hover {
 
 .line {
     border-bottom: 2px solid #3b8b4f;
-    margin: 10px auto;
+    margin: 5px auto;
     width: 50%;
 }
 
@@ -209,6 +210,7 @@ header nav a:hover {
     font-weight: 600; /* Выделение заголовков */
     text-align: center; /* Центрирование заголовков */
 }
+
 
 /* Обычные абзацы */
 .about p, .location p, .investment p, .contacts p {
@@ -315,7 +317,7 @@ header nav a:hover {
 .option {
     background-color: #fff; /* Белый фон для блока */
     padding: 20px;
-    border: 2px solid #ddd; /* Легкая рамка */
+    border: 2px solid #ffffff; /* Легкая рамка */
     border-radius: 10px;
     width: 30%; /* Ширина блока */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
@@ -373,7 +375,7 @@ form {
 form button {
     width: auto; /* Кнопка не растягивается на всю ширину */
     padding: 15px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -383,7 +385,6 @@ form button {
     transition: background-color 0.3s ease;
     align-self: center;
 }
-
 /* Стиль кнопки при наведении */
 form button:hover {
     background-color: #e57b00;
