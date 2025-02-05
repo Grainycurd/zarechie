@@ -187,18 +187,6 @@ button.show-password-btn:hover {
     text-align: center;
 }
 
-.cta-button {
-
-    color: white;
-    padding: 6px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-left: 20px; /* Отступ для кнопки справа */
-    white-space: nowrap; /* Защита от переноса текста */
-}
-.cta-button:hover {
-    transform: translateY(1px);
-}
 /* Hero section */
 .hero {
     position: relative;
@@ -543,15 +531,8 @@ footer p {
     .option {
         width: 80%;
     }
-
-    .cta-button {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-    .nav {
-        font-size: 16px;
-    }
 }
+
 
 @media (max-width: 768px) {
     .burger {
@@ -601,16 +582,9 @@ footer p {
     .option {
         width: 100%;
     }
-
-    .cta-button {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-    .nav {
-        font-size: 16px;
-    }
 }
 
+  
 @media (max-width: 480px) {
     .container {
         width: 100%;
@@ -622,16 +596,10 @@ footer p {
     .hero h1 {
         font-size: 24px;
     }
-
     .hero p {
         font-size: 12px;
     }
-
     .navigation {
-        font-size: 12px;
-    }
-
-    .cta-button {
         font-size: 12px;
     }
     .distance {
