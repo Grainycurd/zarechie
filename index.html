@@ -23,14 +23,27 @@
 
             <!-- Навигация -->
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a class="navigation" href="#about">О проекте</a></li>
                     <li><a class="navigation" href="#location">Контакты</a></li>
-                    <li><a href="#contacts" class="cta-button">Связаться</a></li>
+                    <li><a class="navigation" href="#contacts">Связаться</a></li>
+                    <li><button id="showPasswordModal" class="show-password-btn">Документы</button></li>
                 </ul>
+                <div class="burger" id="burger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </nav>
         </div>
     </header>
+
+    <div id="passwordModal" class="password-modal">
+        <div class="password-modal-content">
+            <input type="password" id="password" placeholder="Введите пароль">
+            <button id="decryptButton">Открыть документ</button>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -154,11 +167,13 @@
                 <input type="email" placeholder="Ваш email" required>
                 <textarea placeholder="Сообщение" required></textarea>
                 <button type="submit">Отправить</button>
+
             </form>
+
         </div>
     </section>
-
     <footer>
+
         <div class="container">
             <p>&copy; 2025 ООО «БЕРЕЗКА» (141400, Московская область, г. Химки, Ленинский проспект, д. 25, ИНН
                 5047117652, ОГРН 1105047008461) <br />
@@ -166,8 +181,8 @@
                 Кадастровый номер 50:10:0080202:1902. Все права защищены.</p>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="scripts.js"></script>
 </body>
 
 </html>

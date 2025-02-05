@@ -1,4 +1,3 @@
-/* Общие стили */
 html {
     scroll-behavior: smooth;
 }
@@ -14,17 +13,7 @@ body {
     color: #333;
 }
 
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    text-align: center;
-}
-/* Шапка */
 header {
-  
     background-color: #3b8b4f;
     padding: 10px 0;
     color: white;
@@ -34,8 +23,8 @@ header .container {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Разделяем элементы по сторонам */
-    flex-wrap: wrap; /* Позволяет перенос элементов на следующую строку */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header .logo {
@@ -61,20 +50,19 @@ header .logo-text {
 }
 
 header nav {
-    flex-grow: 1; /* Навигация растягивается для равномерного распределения */
-    text-align: center; /* Центрируем элементы навигации */
+    flex-grow: 1;
+    text-align: center;
 }
 
 header nav ul {
     display: flex;
-    justify-content: right; /* Центрируем кнопки */
+    justify-content: right;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 header nav ul li {
-    margin: 0 10px; /* Пробелы между кнопками */
+    margin: 0 10px;
 }
 
 header nav ul li a {
@@ -82,24 +70,125 @@ header nav ul li a {
     text-decoration: none;
     font-size: 16px;
 }
+
 header nav a {
     text-decoration: none;
     font-size: 16px;
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/*
-/* Эффект hover для навигации */
 header nav a:hover {
-    color: #000000; /* Темный текст */
+    color: #000000;
 }
 
+/* Стиль кнопки "Ввести пароль" */
+button.show-password-btn {
+    padding: 0px 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+ 
+}
+button.show-password-btn:hover { 
+    color: #000000;
+}
+
+
+
+/* Модальное окно для ввода пароля */
+#passwordModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#passwordModal .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 80%;
+   
+}
+
+#passwordModal input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+#passwordModal button {
+    width: 80%;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#passwordModal button:hover {
+    background-color: #e57b00;
+}
+
+
+/* Бургер-меню для мобильной версии */
+.burger {
+    display: none; /* По умолчанию скрываем бургер */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 10px;
+
+}
+
+.burger div {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Меню скрыто по умолчанию */
+.nav-links {
+    display: flex; /* Показываем меню на больших экранах */
+    list-style: none;
+    margin-top: 12px;
+}
+
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
 
 .cta-button {
-    background-color: #FF8C00;
+
     color: white;
     padding: 6px 12px;
     border-radius: 5px;
@@ -297,7 +386,6 @@ header nav a:hover {
     object-fit: cover;
 }
 
-/* Инвестиции */
 /* Секция Инвестиции */
 .investment {
     background-color: #f9f9f9; /* Светлый фон для лучшей контрастности */
@@ -395,6 +483,21 @@ form button {
 form button:hover {
     background-color: #e57b00;
 }
+
+/* Анимация всплывающего сообщения */
+.password-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba
+}
 /* Футер */
 footer {
     background-color: #333;
@@ -409,6 +512,7 @@ footer p {
 }
 
 /* Адаптивность для различных экранов */
+
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 32px;
@@ -450,6 +554,25 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .burger {
+        display: flex; /* Показываем бургер только на мобилке */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #3b8b4f;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
     .hero h1 {
         font-size: 28px;
     }
