@@ -617,13 +617,6 @@ footer p {
     }
 }
 
-footer p {
-    pointer-events: none; /* Отключает кликабельность */
-    user-select: text; /* Разрешает выделение текста */
-    color: inherit; /* Оставляет стандартный цвет */
-    text-decoration: none; /* Убирает подчеркивание */
-  }
-  
 @media (max-width: 480px) {
     .container {
         width: 100%;
@@ -649,6 +642,9 @@ footer p {
     }
 
     .about p, .location p, .investment p, .contacts p {
+        font-size: 14px;
+    }
+    ul.investment-list li {
         font-size: 14px;
     }
 }
