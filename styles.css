@@ -617,6 +617,12 @@ footer p {
     }
 }
 
+footer p {
+    pointer-events: none; /* Отключает кликабельность */
+    user-select: text; /* Разрешает выделение текста */
+    color: inherit; /* Оставляет стандартный цвет */
+    text-decoration: none; /* Убирает подчеркивание */
+  }
   
 @media (max-width: 480px) {
     .container {
