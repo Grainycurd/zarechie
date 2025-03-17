@@ -388,6 +388,35 @@ button.show-password-btn:hover {
 }
 
 /* Блоки опций */
+.investments {
+    margin-top: 30px;
+}
+.investment-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+ul.investment-list {
+    list-style: none; /* Убираем стандартные маркеры */
+  }
+  
+  ul.investment-list li {
+    position: relative;
+    padding-left: 25px; /* Отступ для кастомного маркера */
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Добавляем кастомный маркер (галочка) */
+  ul.investment-list li::before {
+    content: "➤"; /* Или можно заменить на "➤", "■", "–" */
+    position: absolute;
+    left: 0;
+    color: #3b8b4f; /* Цвет маркера */
+    font-size: 16px;
+  }
+
 .investment-options {
     display: flex;
     justify-content: space-between;
