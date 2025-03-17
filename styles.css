@@ -374,6 +374,9 @@ button.show-password-btn:hover {
     object-fit: cover;
 }
 
+.content-block {
+    text-align: left;
+}
 /* Секция Инвестиции */
 .investment {
     background-color: #f9f9f9; /* Светлый фон для лучшей контрастности */
@@ -404,8 +407,9 @@ ul.investment-list {
     position: relative;
     padding-left: 25px; /* Отступ для кастомного маркера */
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
+    color: #555
   }
   
   /* Добавляем кастомный маркер (галочка) */
