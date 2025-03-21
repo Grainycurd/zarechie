@@ -25,10 +25,12 @@
             <!-- Навигация -->
             <nav>
                 <ul class="nav-links">
+                    <li><button id="showPasswordModal" class="show-password-btn">Документы</button></li>
+                </ul>
+                <ul class="nav-links burger-menu">
                     <li><a class="navigation" href="#about">О проекте</a></li>
                     <li><a class="navigation" href="#location">Контакты</a></li>
                     <li><a class="navigation" href="#contacts">Связаться</a></li>
-                    <li><button id="showPasswordModal" class="show-password-btn">Документы</button></li>
                 </ul>
                 <div class="burger" id="burger" onclick="toggleMenu()">
                     <div></div>
@@ -60,6 +62,9 @@
             <div class="hero-slide">
                 <img src="img/forest3.jpg" alt="Image 3">
             </div>
+
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
         </div>
         <div class="key-details-overlay">
             <div class="key-details">

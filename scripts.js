@@ -4,22 +4,43 @@ import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-
 
 document.addEventListener("DOMContentLoaded", function () {
     // СЛАЙД-ШОУ
+
+    // Получаем все слайды и кнопки
     const slides = document.querySelectorAll('.hero-slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
     let currentSlide = 0;
+    let slideInterval;
 
-    function changeSlide() {
+    // Функция обновления видимости слайдов
+    function updateSlides() {
         slides.forEach((slide, index) => {
-            slide.style.opacity = 0; // Скрываем все слайды
-            if (index === currentSlide) {
-                slide.style.opacity = 1; // Показываем текущий
-            }
+            slide.style.opacity = index === currentSlide ? "1" : "0";
+            slide.style.transition = "opacity 0.5s ease-in-out"; // Плавное переключение
         });
-
-        currentSlide = (currentSlide + 1) % slides.length; // Переход к следующему
     }
 
-    setInterval(changeSlide, 5000); // Автоматическая смена каждые 5 секунд
-    changeSlide(); // Инициализация
+    // Функция автоматического переключения слайдов
+    function autoChangeSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlides();
+    }
+
+    // Функция смены слайдов при нажатии на кнопки
+    function changeImage(n) {
+        clearInterval(slideInterval); // Останавливаем авто-смену при клике
+        currentSlide = (currentSlide + n + slides.length) % slides.length; // Переключаем слайд
+        updateSlides();
+        slideInterval = setInterval(autoChangeSlide, 5000); // Перезапускаем авто-смену
+    }
+
+    // Добавляем обработчики событий для кнопок
+    prevButton.addEventListener('click', () => changeImage(-1));
+    nextButton.addEventListener('click', () => changeImage(1));
+
+    // Запускаем слайд-шоу
+    updateSlides();
+    slideInterval = setInterval(autoChangeSlide, 5000);
 
     // Элементы для модального окна
     const showPasswordModalButton = document.getElementById("showPasswordModal");
@@ -69,12 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const burger = document.querySelector(".burger");
-    const navLinks = document.querySelector(".nav-links");
+    const navLinks = document.querySelector(".burger-menu");
 
     burger.addEventListener("click", function () {
         navLinks.classList.toggle("active");
     });
 });
+
 // Открытие модального окна при нажатии на кнопку "Ввести пароль"
 document.querySelector('.show-password-btn').addEventListener('click', function () {
     document.getElementById('passwordModal').style.display = 'flex';

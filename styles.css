@@ -50,9 +50,32 @@ header .logo-text {
 }
 
 header nav {
-    flex-grow: 1;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #3b8b4f;
 }
+
+.show-password-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+} 
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-top: 20px;
+    margin: 0;
+    gap: 15px; 
+}
+
+
+
 
 header nav ul {
     display: flex;
@@ -85,7 +108,7 @@ header nav a:hover {
 }
 
 /* Стиль кнопки "Ввести пароль" */
-button.show-password-btn {
+button.show-password-btn {   
     padding: 0px 15px;
     background: none;
     border: none;
@@ -171,13 +194,6 @@ button.show-password-btn:hover {
     border-radius: 5px;
 }
 
-/* Меню скрыто по умолчанию */
-.nav-links {
-    display: flex; /* Показываем меню на больших экранах */
-    list-style: none;
-    margin-top: 12px;
-}
-
 
 .container {
     width: 80%;
@@ -224,6 +240,25 @@ button.show-password-btn:hover {
     object-fit: cover; /* Картинка обрезается по краям, чтобы сохранить пропорции */
 }
 
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .hero h1 {
     font-size: 36px;
 }
@@ -571,22 +606,33 @@ footer p {
     .burger {
         display: flex; /* Показываем бургер только на мобилке */
     }
-    .nav-links {
+
+    .burger-menu {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
         background-color: #3b8b4f;
         position: absolute;
-        top: 50px;
+        top: 70px;
         left: 0;
         right: 0;
         z-index: 1000;
     }
-
-    .nav-links.active {
+    .burger-menu.active {
         display: flex;
     }
+    /* "Документы" всегда виден */
+    .show-password-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: white;
+      }
+
+
     .hero h1 {
         font-size: 28px;
     }
