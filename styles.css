@@ -53,7 +53,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 10px 0;
     background-color: #3b8b4f;
 }
 
@@ -671,7 +671,7 @@ footer p {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0;
         text-align: center;
     }
     .hero h1 {
