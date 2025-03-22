@@ -637,7 +637,7 @@ footer p {
         color: white;
         border: none;
         padding: 5px 5px;
-        font-size: 10px;
+        font-size: 12px;
         border-radius: 5px;
         cursor: pointer;
         margin-top: -11px;
@@ -709,6 +709,7 @@ footer p {
         padding-right: 10px;
         margin-right: 10px;
     }
+
     ul.investment-list li {
         font-size: 14px;   
     }
@@ -730,9 +731,12 @@ footer p {
     color: white;
     border: none;
     padding: 5px 5px;
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 5px;
     cursor: pointer;
    margin-top: -11px;
+    }
+    #passwordModal {
+        padding-left: 60px;
     }
 }
