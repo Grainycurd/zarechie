@@ -702,19 +702,29 @@ footer p {
         font-size: 24px;
     }
 
-    .about p, .location p, .investment p, .contacts p {
+    .about p, .location p, .investment p, .contacts p, .investment-list {
         font-size: 14px;
         overflow: visible;
-        padding-left: 10px;
-        margin-left: 10px;
+        margin-left: 5px;
         padding-right: 10px;
         margin-right: 10px;
     }
     ul.investment-list li {
-        font-size: 14px;
-        
+        font-size: 14px;   
+    }
+    .map-wrapper .yandex-map {
+       margin-left: -5px;
+       margin-right: -5px;
+    }
+    .map-wrapper .location-overlay {
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
+    .investment-options .option {
+        margin-left: -15px;
+        margin-right: -5px;
+    }
     button.show-password-btn {
     background-color: #FF8C00;
     color: white;
