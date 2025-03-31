@@ -33,20 +33,9 @@ header .logo {
 }
 
 header .logo-img {
-    width: 40px;
+    width: 200px;
     height: auto;
     margin-right: 10px;
-}
-header .logo a {
-    text-decoration: none;
-}
-header .logo-text {
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    line-height: 1;
-    margin-left: -10px;
-    transform: translateY(-80%);
 }
 
 header nav {
@@ -209,11 +198,11 @@ button.show-password-btn:hover {
 /* Hero section */
 .hero {
     position: relative;
-    max-height: 800px;
+    max-height: 100%;
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding-top: 50px;
     overflow: hidden;
     width: 100vw; /* Занимает всю ширину экрана */
     margin: 0; /* Убираем любые отступы */
@@ -272,37 +261,7 @@ button.show-password-btn:hover {
     color: #ffffff;
     opacity:50%;
 }
-/* Контейнер для текста под слайдшоу */
-.key-details {
 
-    display: flex;
-    justify-content: space-between; /* Распределение по ширине */
-    padding: 20px;
-    margin-top: 10px; /* Немного поднимем блок для стыковки с слайдшоу */
-    margin-bottom: -25px;
-}
-
-.key-item {
-    text-align: center;
-    width: 30%; /* 3 столбца */
-}
-
-.distance {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.line {
-    border-bottom: 2px solid #3b8b4f;
-    margin: 5px auto;
-    width: 50%;
-}
-
-.label {
-    font-size: 14px;
-    color: #ffffff; /* Тёмный цвет для текста */
-}
 
 /* Заголовки */
 .hero h1 {
@@ -314,14 +273,14 @@ button.show-password-btn:hover {
 
 
 /* Общие настройки для секций */
-.about, .location, .investment, .contacts {
+.about, .location, .contacts {
     padding: 60px 0;
     width: 100%;
     background-color: #f9f9f9; /* Светлый фон для лучшей контрастности */
 }
 
 /* Заголовки секций */
-.about h2, .location h2, .investment h2, .contacts h2 {
+.about h2, .location h2, .contacts h2 {
     font-size: 32px; /* Увеличен размер для лучшей видимости */
     margin-bottom: 20px;
     color: #2c3e50; /* Тёмно-серый для контраста */
@@ -331,57 +290,16 @@ button.show-password-btn:hover {
 
 
 /* Обычные абзацы */
-.about p, .location p, .investment p, .contacts p {
+.about p, .location p, .contacts p {
     font-size: 18px; /* Увеличен размер для улучшения читаемости */
     line-height: 1.8; /* Увеличен межстрочный интервал */
     color: #555; /* Немного темнее серый */
     margin-bottom: 20px; /* Увеличен отступ между абзацами */
 }
 
-/* Список с деталями */
-.key-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
 
-.key-details li {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 15px; /* Увеличен отступ для разделения элементов */
-    color: #555; /* Более темный серый для текста */
-}
 
-/* Выделение важных данных в списке */
-.key-details li strong {
-    color: #5b3c22; /* Коричневый цвет для выделения */
-    font-weight: 700; /* Жирное выделение */
-}
 
-/* Блок с иконками */
-.icons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    flex-wrap: wrap;
-}
-
-.icon {
-    text-align: center;
-    width: 30%;
-    margin-bottom: -20px;
-}
-
-.icon img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.icon p {
-    font-size: 14px;
-    color: #333;
-}
 
 /* Контейнер для карты */
 .adress {
@@ -459,44 +377,6 @@ ul.investment-list {
     font-size: 16px;
   }
 
-.investment-options {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Расстояние между блоками */
-    flex-wrap: wrap; /* Чтобы блоки переносились на следующую строку на маленьких экранах */
-}
-
-/* Одна опция */
-.option {
-    background-color: #fff; /* Белый фон для блока */
-    padding: 20px;
-    border: 2px solid #ffffff; /* Легкая рамка */
-    border-radius: 10px;
-    width: 30%; /* Ширина блока */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Эффект на ховер */
-.option:hover {
-    transform: translateY(-2px); /* Поднимаем блок при наведении */
-    background-color: #f2f2f2; /* Легкий фон при наведении */
-}
-
-/* Заголовок внутри блока */
-.option h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* Текст внутри блока */
-.option p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
 
 
 /* Стили для формы */
@@ -625,6 +505,7 @@ footer p {
         left: 0;
         right: 0;
         z-index: 1000;
+        margin-top: 20px;
     }
     .burger-menu.active {
         display: flex;
